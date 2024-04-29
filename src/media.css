@@ -1,0 +1,85 @@
+@import 'style.css';
+
+@media screen and (max-width: 768px) {
+    .container {
+        column-gap: 20px;
+        grid-template-areas: ". . . ."
+                            ". . . header"
+                            "name name name header"
+                            "main main main aside"
+                            ". . . footer";
+    }
+   
+}
+
+@media screen and (max-width: 640px) {
+
+    .container {
+        column-gap: 40px;
+        display: grid;
+        grid-template-areas: "header" "name" "aside"
+                            "main" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+  #name {
+    margin-left: 0;
+  } 
+  aside {
+    justify-content: center;
+  }
+    #contacts {
+        display: grid;
+        justify-content: center;
+    }  
+    
+    .skills ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 20px;
+    }
+
+    footer {
+        display: grid;
+        justify-content: end;
+    }
+}
+
+@media print {
+    * {
+        font-size: 14pt !important;
+    }
+
+    body {
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        width: 210mm;
+    }
+  
+    .container {
+        grid-template-areas: 
+        "name name . header"
+        "main main main aside"
+        ". . . footer";
+        
+        grid-template-rows: repeat(3, auto);
+    }
+    
+    #name {
+        align-content: center;
+    }
+    
+    h2 {
+        margin: 0 !important;
+    }
+
+    #avatar img {
+        margin: 10px;  
+    }
+
+    .no-print { display: none !important}
+    
+}

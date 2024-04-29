@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#fff;
+    color: rgb(18, 18, 20);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+}
+
+.container {
+    column-gap: 40px;
+    display: grid;
+    grid-template-areas: ". . . ."
+                        ". . . header"
+                        "name name . header"
+                        "main main main aside"
+                        ". . . footer";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5% 5% repeat(3, auto);
+}
+
+#name {
+    background-color: rgb(54, 114, 122);
+    color: #fff;   
+    grid-area: name;
+    letter-spacing: 0.1em;
+    margin-left: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+header {
+    background-color: rgb(177, 214, 212);
+    grid-area: header;
+}
+
+#avatar {
+    align-content: center;
+    display: grid;
+}
+
+#avatar img {
+    border-radius: 200px;
+    box-shadow: -1px -1px 5px 3px rgb(54, 114, 122),  1px 1px 5px 3px rgb(54, 114, 122);
+    justify-self: center;
+    margin: 20px;
+    width: 70%;
+}
+
+aside {
+    background-color: rgb(177, 214, 212);
+    display: grid;
+    grid-area: aside;
+    padding: 20px;
+  }
+
+ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+li {
+    list-style-type: circle;
+    margin-left: 5px;
+}
+
+#email {
+    list-style-image:URL(/images/icons8-email-20.png);
+}
+
+#phone-number {
+    list-style-image:URL(/images/icons8-phone-20.png);    
+}
+
+#location {
+    list-style-image:URL(/images/icons8-location-20.png);   
+}
+
+#specialty {
+    list-style-image:URL(/images/icons8-circle-15.png);
+}
+
+.aside-content-university {
+    border-left: 2px solid rgb(77, 89, 107);
+    margin-left: 9px;
+    padding-left: 14px;
+}
+
+main {
+    grid-area: main;;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.main-content-line {
+    border-top: 2px solid rgb(77, 89, 107);
+}
+
+.main-content-work-experience a {
+    color: rgb(38, 76, 82);
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline rgb(177, 214, 212) double;
+    text-shadow: 2px 2px 2px rgb(177, 214, 212);
+}
+
+.main-content-work-experience a:hover {
+    color: rgb(94, 212, 228);
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px rgb(4, 14, 13);
+}
+
+.main-content-courses ul {
+    margin-top: 16px;
+}
+
+.main-content-courses-headlines {
+    list-style-image:URL(/images/icons8-graduation-cap-15.png);
+    margin-top: 16px;
+}
+
+.main-content-courses-headlines li {
+    list-style-image: none;
+    list-style-type: circle;
+}
+
+footer {
+    grid-area: footer;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid rgb(177, 214, 212);
+    margin: 20px;
+    padding: 5px;
+}
+
+button:hover {
+    border: 1px solid rgb(177, 214, 212);
+    box-shadow: -1px -1px 2px 2px rgb(54, 114, 122), 1px 1px 2px 2px rgb(54, 114, 122);
+}
+
+.button-print {
+    color: rgb(38, 76, 82);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.margin-0 {
+    margin: 0;
+}

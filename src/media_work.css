@@ -1,0 +1,25 @@
+@import 'style_work.css';
+
+@media print {
+    * {
+        font-size: 14pt !important;
+    }
+
+    body {
+        background-color: #fff;
+        height: 297mm;
+        margin: 0;
+        width: 210mm;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    section {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .no-print { display: none !important; }
+}
