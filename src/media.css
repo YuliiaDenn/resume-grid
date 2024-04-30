@@ -72,6 +72,10 @@
         align-content: center;
     }
     
+    aside {
+        padding-bottom: 0 !important;
+    }
+
     h2 {
         margin: 0 !important;
     }
